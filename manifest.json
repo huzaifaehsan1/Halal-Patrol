@@ -2,11 +2,19 @@
   "manifest_version": 2,
   "name": "Halal Patrol",
   "version": "0.1.0",
+  "description": "Removes Haram Text",
+  "short_name": "Halal Patrol",
+  "permissions": ["activeTab", "declarativeContent", "storage", "<all_urls>"],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["script.js"],
-      "css": ["styles.css"]
+      "js": ["script.js"]
     }
-  ]
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "def16.png",
+      "32": "def32.png"
+    }
+  }
 }
